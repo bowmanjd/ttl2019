@@ -17,15 +17,16 @@ Once you are at the command-line, make sure `python --version` outputs something
 
 Now you can install the few required packages for interacting with the sample Python code. These are listed in `requirements.txt` and can be installed/upgraded with `python -m pip install -Ur requirements.txt` (again, you may need to use `python3` instead if your system's `python` launches version 2.7.)
 
-If you are concerned about cluttering up your Python environment (as you should be), you create a virtual environment in this directory with `python -m venv venv` then activate it using one of the following:
+If you are concerned about cluttering up your Python environment [as you should be](https://m.xkcd.com/1987/), you can create a virtual environment in this directory with `python -m venv venv` then activate it using one of the following:
 
-#### On Windows
+#### Activate virtual environment on Windows
 - cmd.exe: `.\venv\Scripts\activate.bat`
 - PowerShell: `.\venv\Scripts\Activate.ps1`
 
-#### Everything else
+#### Activate virtual environment on Mac, Linux, and other self-respecting platforms
+(If you don't know, then you are likely using bash)
 - bash or zsh: `source ./venv/bin/activate`
 - fish: `. ./venv/bin/activate.fish`
 - csh/tcsh: `source ./venv/bin/activate.csh`
 
-Then run `pip install -Ur requirements.txt`
+Then run `pip install -Ur requirements.txt` after which you can simply execute `python` whenever you need.
