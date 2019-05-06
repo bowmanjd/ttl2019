@@ -11,6 +11,3 @@ def list_responses():
     r = requests.get("https://ttl2019.bowmanjd.com/responses")
     responses = r.json()
     return responses
-
-
-add_response(["Something", "Something else", "And something more"])
