@@ -38,7 +38,7 @@ def greet(greeting="Hello", audience="World"):
 
 # f-strings are a syntactic convenience, and highly addictive.
 # prefixing your string with f allows you to interpolate defined
-# variables, denoted by curly braces
+# variables, denoted by curly braces.
 # Note the multiple defined arguments in the function. You can
 # name your arguments when calling the function. For instance,
 # you can write greet(audience="Galaxy")
@@ -62,37 +62,21 @@ archimedes_constant = a_dict["pi"]
 a_lonely_number = a_list[4]
 
 # This function demonstrates loops in Python.
+# Use range in a loop to count; or supply an iterable
+# such as a list to walk through.
 def list_random_numbers(quantity, maximum=10):
     possible = range(maximum)
     for i in range(quantity):
         print(random.choice(possible))
 
 
-# Read a file and print it to the console
-def print_file(filename="sample.csv"):
-    f = open(filename)
-    contents = f.read()
-    print(contents)
-    f.close()
-
-
-# Read a file and walk through it line by line
-def walk_file(filename="sample.csv"):
-    f = open(filename)
-    for line in f:
-        print(line, end="")
-    f.close()
-
-
-# Read a file, and write each line to a different file
-# if that line contains the string "Teacher"
-def write_new_file(infilename="sample.csv"):
-    outfilename = f"tempfile{random.randint(1,9999)}.csv"
-    infile = open(infilename, "r")
-    outfile = open(outfilename, "w")
-    for line in infile:
-        if "Teacher" in line:
-            outfile.write(line)
-    infile.close()
-    outfile.close()
-    return outfilename
+# Python has conditionals (if/then)
+def compare(a, b):
+    if a == b:
+        print("equality")
+    if not a == b:
+        print("inequality")
+    if a > b:
+        print("greater than")
+    else:
+        print("less than or equal")
