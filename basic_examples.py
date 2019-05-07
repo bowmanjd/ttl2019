@@ -43,6 +43,10 @@ def greet(greeting="Hello", audience="World"):
 # name your arguments when calling the function. For instance,
 # you can write greet(audience="Galaxy")
 
+
+####################
+## Variable types ##
+####################
 # Python has many "types"
 # https://docs.python.org/3/library/stdtypes.html
 a_number = 12
@@ -61,15 +65,20 @@ archimedes_constant = a_dict["pi"]
 # Lists, on the other hand, can be accessed by zero-based numeric index
 a_lonely_number = a_list[4]
 
-# This function demonstrates loops in Python.
+###########
+## Loops ##
+###########
 # Use range in a loop to count; or supply an iterable
 # such as a list to walk through.
 def list_random_numbers(quantity, maximum=10):
-    possible = range(maximum)
     for i in range(quantity):
-        print(random.choice(possible))
+        print(random.randint(0, maximum))
 
 
+##################
+## Conditionals ##
+##  (if/then)   ##
+##################
 # Python has conditionals (if/then)
 def compare(a, b):
     if a == b:
